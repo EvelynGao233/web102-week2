@@ -1,0 +1,60 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+
+
+h1,
+h2 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 85px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: url("../src/assets/background.jpg");
+
+}
+
+/* Style for the "Next" button */
+.next-button {
+  padding: 25px 50px;
+  border: none;
+  border-radius: 15px;
+  background-color: #bbb;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.next-button:hover {
+  background-color: #155a8a;
+}
