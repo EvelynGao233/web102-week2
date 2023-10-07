@@ -32,6 +32,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/EvelynGao233/web102-week3/blob/main/Kapture%202023-10-07%20at%2016.09.57.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap  
 <!-- Recommended tools:
