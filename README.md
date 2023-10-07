@@ -1,26 +1,26 @@
-# Web Development Project 2 - *Flipcards*
+# Web Development Project 3 - *Flipcards*
 
 Submitted by: **Yuxin Gao**
 
-This web app: **Practice Chinesse Words!**
+This web app: **Learning Chinese**
 
-Time spent: **4** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [x] A shuffle button is used to randomize the order of the cards
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer (convert to lower case)
+- [x] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
@@ -28,11 +28,12 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/EvelynGao233/web102-week2/blob/main/Kapture%202023-10-02%20at%2001.48.29.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/EvelynGao233/web102-week3/blob/main/Kapture%202023-10-07%20at%2016.09.57.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with Kap
+GIF created with Kap  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -56,4 +57,5 @@ Describe any challenges encountered while building the app.
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
+    limitations under the License.permissions and
     limitations under the License.
