@@ -58,3 +58,77 @@ body {
 .next-button:hover {
   background-color: #155a8a;
 }
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+/* Input field */
+.guess-input {
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 15px;
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+  width: 70%; 
+  max-width: 800px;
+}
+
+/* Action buttons */
+.action-button {
+  padding: 25px 50px;
+  margin: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #bbb;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background-color: #155a8a;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feedback {
+  padding: 20px;
+  font-size: 35px;
+  border-radius: 15px;
+  margin-top: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.correct {
+  background-color: rgba(0, 255, 0, 0.2);
+  color: green;
+  border: 2px solid green;
+}
+
+.incorrect {
+  background-color: rgba(255, 0, 0, 0.2); 
+  color: red;
+  border: 2px solid red;
+}

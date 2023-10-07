@@ -19,21 +19,83 @@ const cardsData = [
 
 const App = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [userInput, setUserInput] = useState('');
+  const [isCorrect, setIsCorrect] = useState(null);
+  const [streak, setStreak] = useState(0);
+  const [maxStreak, setMaxStreak] = useState(0);
+  const [shuffledCards, setShuffledCards] = useState(cardsData); 
+
 
   const handleNext = () => {
-    const randomIndex = Math.floor(Math.random() * cardsData.length);
-    setCurrentCardIndex(randomIndex);
+    if (currentCardIndex < cardsData.length - 1) {
+      setCurrentCardIndex(currentCardIndex + 1);
+    }
+    setIsCorrect(null);
+    setUserInput('');
   };
+
+  const handleBack = () => {
+    if (currentCardIndex > 0) {
+      setCurrentCardIndex(currentCardIndex - 1);
+    }
+    setIsCorrect(null);
+    setUserInput('');
+  };
+
+  const handleGuess = () => {
+    if (userInput.toLowerCase() === shuffledCards[currentCardIndex].english.toLowerCase()) {
+        setIsCorrect(true);
+        setStreak(prevStreak => {
+            const newStreak = prevStreak + 1;
+            setMaxStreak(prevMax => Math.max(prevMax, newStreak));
+            return newStreak;
+        });
+    } else {
+        setIsCorrect(false);
+        setStreak(0); 
+    }
+};
+
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+  };
+
+  const handleShuffle = () => {
+    const shuffled = [...cardsData].sort(() => Math.random() - 0.5);
+    setShuffledCards(shuffled);
+    setCurrentCardIndex(0);  
+  };
+
 
   return (
     <div className="App">
       <h1>Learning Chinese Words</h1>
       <h2>Want to learn some new Chinese words? Practice!</h2>
       <p>Number of Card: {cardsData.length}</p>
+      <p>Streak: {streak} Max Streak: {maxStreak}</p>
       <div className="flashcards-app">
-        <Flashcard card={cardsData[currentCardIndex]} />
-        <button className="next-button" onClick={handleNext}>Next</button>
+        <Flashcard card={shuffledCards[currentCardIndex]} /> {/* Use shuffledCards state here */}
       </div>
+      <div className="input-group">
+        <input 
+          className="guess-input" 
+          value={userInput} 
+          onChange={handleInputChange} 
+          placeholder="Enter your guess here"
+        />
+        <button className="action-button" onClick={handleGuess}>Submit</button>
+      </div>
+      <div className="navigation-buttons">
+        <button className="action-button" onClick={handleBack}>Back</button>
+        <button className="action-button" onClick={handleNext}>Next</button>
+        <button className="action-button" onClick={handleShuffle}>Shuffle</button>
+      </div>
+      {isCorrect !== null && (
+        <div className={`feedback ${isCorrect ? 'correct' : 'incorrect'}`}>
+          {isCorrect ? 'Correct!' : 'Incorrect!'}
+        </div>
+      )}
+      
     </div>
   );
 }
